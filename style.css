@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ------ Global ------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  transition: 0.2s ease-in-out;
+}
+
+:root {
+  --color-main: #00033d;
+  --color-two: #0600ab;
+  --color-three: #1f284d;
+}
+
+body {
+  color: white;
+  background: linear-gradient(to top, rgb(0, 7, 36), rgb(0, 3, 31));
+}
+
+/* ------ Inicio do nav ------ */
+
+.navbar {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.navbar .logo img {
+  margin: 0 30px;
+  height: 50px;
+}
+
+.navbar .links ul {
+  display: flex;
+  gap: 30px;
+  padding: 0 50px;
+}
+
+.navbar .links ul li {
+  list-style: none;
+}
+
+.navbar .links ul li:hover {
+  transform: scale(1.08);
+}
+
+.navbar .links ul li a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.navbar .links ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: var(--color-two);
+  transition: 0.3s;
+}
+
+.navbar .links ul li a:hover::after {
+  width: 100%;
+}
+
+/* ------ Pagina home ------ */
+
+.home {
+  display: flex;
+  width: 80%;
+  margin: 100px auto;
+}
+
+.home .apresentation {
+  width: 50%;
+}
+
+.home .apresentation h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+.home .apresentation h1 span {
+  color: #71baff;
+}
+
+.home .apresentation h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.home .apresentation p {
+  font-size: 20px;
+}
+
+.home .apresentation .btm-project {
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  background: transparent;
+  border: white solid 1px;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.home .apresentation .btm-project::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+}
+
+.home .apresentation .btm-project:hover::before {
+  transform: scale(1.08);
+  left: 110%;
+  transition: 0.5s;
+}
+
+.home .apresentation .btm-project:hover::before {
+  transform: scale(1.08);
+  left: 110%;
+  transition: 0.5s;
+}
+
+.home .apresentation .btm-project a {
+  text-decoration: none;
+  color: white;
+}
+
+.home .my-photo {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+.home .my-photo img {
+  width: 80%;
+  background: var(--color-main);
+  box-shadow: 0 0 10px 0 var(--color-two);
+}
+
+/* ------ Projetos ------ */
+
+.container {
+  width: 100%;
+}
+
+.container h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.projects {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  margin: 100px;
+}
+
+.projects .project {
+  background: var(--color-three);
+  width: 300px;
+  height: 350px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.projects .project:hover {
+  transform: scale(1.02);
+}
+
+.projects .project h2 {
+  font-size: 20px;
+}
+
+.projects .project p {
+  font-size: 14px;
+}
+
+.projects .project img {
+  width: 250px;
+  margin-top: 15px;
+  box-shadow: 0 0 10px 0 var(--color-main);
+}
+
+.projects .project svg {
+  width: 50px;
+  margin-top: -20px;
+  margin-bottom: -30px;
+}
+
+.projects .project svg:hover {
+  transform: scale(1.05);
+}
+
+.projects .project button {
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  outline: none;
+  color: white;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.projects .project button:hover {
+  transform: scale(1.05);
+  text-decoration: underline;
+}
+
+/* ------ Sobre Mim ------ */
+
+.about h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  margin: 20px 0;
+}
+
+.more-about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.more-about .photo-two {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.more-about .photo-two img {
+  width: 80%;
+  margin: 50px 0;
+  box-shadow: 0 0 10px 0 var(--color-three);
+  border-radius: 50px;
+}
+
+.more-about .about-me {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px 0;
+}
+
+.more-about .about-me .apresentation h3 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.more-about .about-me .apresentation p {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.more-about .about-me .apresentation {
+  width: 80%;
+  margin: 20px 0;
+}
+
+.more-about .about-me .tecnologi h3 {
+  font-size: 30px;
+  padding: 50px 0 20px 0;
+  text-align: center;
+}
+
+.more-about .about-me .tecnologi .tecs {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 50px;
+}
+
+.more-about .about-me .tecnologi .tecs .tec {
+  text-align: center;
+  width: 100px;
+}
+
+.more-about .about-me .tecnologi .tecs .tec:hover {
+  background: var(--color-two);
+  transform: scale(1.08);
+  box-shadow: 0 0 10px 0 var(--color-two);
+  border-radius: 50px;
+}
+
+.more-about .about-me .tecnologi .tecs .tec svg {
+  backdrop-filter: (0 10px 0 var(--color-two));
+}
+
+.more-about .about-me .tecnologi .tecs .tec svg:hover {
+  transform: scale(1.1);
+}
+
+/* ------ Contato ------ */
+
+.contact {
+  height: 100px;
+}
+
+.contact .speak ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.contact .speak ul li {
+  list-style: none;
+}
+
+.contact .speak ul li:hover {
+  transform: scale(1.1);
+}
+
+/* ------ Rodape ------ */
+
+footer p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+/* Responsividade */
+
+@media (max-width: 1230px) {
+  .more-about {
+    gap: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .home {
+    display: block;
+    width: 80%;
+    margin: 50px auto;
+  }
+
+  .home .apresentation {
+    width: 100%;
+  }
+
+  .home .my-photo {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .home .my-photo img {
+    width: 100%;
+    border-radius: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 5px;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .navbar .logo img {
+    margin: 0 5px;
+  }
+
+  .navbar .links ul {
+    margin: 0 5px;
+  }
+}
