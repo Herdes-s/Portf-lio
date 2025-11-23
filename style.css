@@ -14,11 +14,31 @@
   --color-main: #00033d;
   --color-two: #0600ab;
   --color-three: #1f284d;
+
+  --color-grad01: #000724;
+  --color-grad02: #00031f;
+  --name: #71baff;
+  --paragraph: #ffffff80;
+
+  --color-text: white;
+}
+
+.light {
+  --color-main: #79b3ff;
+  --color-two: #3e72ff;
+  --color-three: #4f80ad;
+
+  --color-grad01: #d2e7ff;
+  --color-grad02: #cfecff;
+  --name: #192972;
+  --paragraph: #00000080;
+
+  --color-text: black;
 }
 
 body {
   color: white;
-  background: linear-gradient(to top, rgb(0, 7, 36), rgb(0, 3, 31));
+  background: linear-gradient(to top, var(--color-grad01), var(--color-grad02));
 }
 
 /* ------ Inicio do nav ------ */
@@ -29,6 +49,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
+  color: var(--color-text);
 }
 
 .navbar .logo img {
@@ -38,6 +59,7 @@ body {
 
 .navbar .links ul {
   display: flex;
+  align-items: center;
   gap: 30px;
   padding: 0 50px;
 }
@@ -50,8 +72,19 @@ body {
   transform: scale(1.08);
 }
 
+.navbar .links ul li #button{
+  background:linear-gradient(to top, var(--color-two), var(--color-main)) ;
+  color: var(--color-text);
+  width: 100px;
+  height: 30px;
+  border: var(--name);
+  border-radius: 20px;
+  outline: none;
+  font-weight: bold;
+}
+
 .navbar .links ul li a {
-  color: white;
+  color: var(--color-text);
   text-decoration: none;
   position: relative;
 }
@@ -77,6 +110,7 @@ body {
   display: flex;
   width: 80%;
   margin: 100px auto;
+  color: var(--color-text);
 }
 
 .home .apresentation {
@@ -89,7 +123,7 @@ body {
 }
 
 .home .apresentation h1 span {
-  color: #71baff;
+  color: var(--name);
 }
 
 .home .apresentation h2 {
@@ -106,7 +140,7 @@ body {
   width: 150px;
   height: 50px;
   background: transparent;
-  border: white solid 1px;
+  border: var(--color-text) solid 1px;
   border-radius: 10px;
   outline: none;
   font-size: 15px;
@@ -145,7 +179,7 @@ body {
 
 .home .apresentation .btm-project a {
   text-decoration: none;
-  color: white;
+  color: var(--color-text);
 }
 
 .home .my-photo {
@@ -164,6 +198,7 @@ body {
 
 .container {
   width: 100%;
+  color: var(--color-text);
 }
 
 .container h2 {
@@ -222,7 +257,7 @@ body {
   height: 30px;
   margin: 10px;
   outline: none;
-  color: white;
+  color: var(--color-text);
   border: none;
   background-color: transparent;
   font-size: 15px;
@@ -241,6 +276,7 @@ body {
   padding: 10px;
   font-size: 40px;
   margin: 20px 0;
+  color: var(--color-text);
 }
 
 .more-about {
@@ -273,11 +309,12 @@ body {
 .more-about .about-me .apresentation h3 {
   font-size: 30px;
   padding-bottom: 10px;
+  color: var(--color-text);
 }
 
 .more-about .about-me .apresentation p {
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--paragraph);
 }
 
 .more-about .about-me .apresentation {
@@ -289,6 +326,7 @@ body {
   font-size: 30px;
   padding: 50px 0 20px 0;
   text-align: center;
+  color: var(--color-text);
 }
 
 .more-about .about-me .tecnologi .tecs {
@@ -321,6 +359,7 @@ body {
 
 .contact {
   height: 100px;
+  color: var(--color-text);
 }
 
 .contact .speak ul {
@@ -338,6 +377,12 @@ body {
   transform: scale(1.1);
 }
 
+.contact .speak ul li svg{
+  color: var(--color-text);
+  background-color: black;
+  border-radius: 50%;
+}
+
 /* ------ Rodape ------ */
 
 footer p {
@@ -345,6 +390,7 @@ footer p {
   align-items: center;
   justify-content: center;
   height: 100px;
+  color: var(--color-text);
 }
 
 /* Responsividade */
