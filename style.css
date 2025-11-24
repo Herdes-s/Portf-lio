@@ -44,12 +44,15 @@ body {
 /* ------ Inicio do nav ------ */
 
 .navbar {
+  position: sticky;
+  top: 0;
   display: flex;
   height: 100px;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
   color: var(--color-text);
+  background: linear-gradient(to top, transparent, var(--color-two));
 }
 
 .navbar .logo img {
