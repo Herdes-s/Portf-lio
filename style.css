@@ -13,7 +13,7 @@
 :root {
   --color-main: #00033d;
   --color-two: #0600ab;
-  --color-three: #1f284d;
+  --color-three: #34499e;
 
   --color-grad01: #000724;
   --color-grad02: #00031f;
@@ -72,8 +72,8 @@ body {
   transform: scale(1.08);
 }
 
-.navbar .links ul li #button{
-  background:linear-gradient(to top, var(--color-two), var(--color-main)) ;
+.navbar .links ul li #button {
+  background: linear-gradient(to top, var(--color-two), var(--color-main));
   color: var(--color-text);
   width: 100px;
   height: 30px;
@@ -171,12 +171,6 @@ body {
   transition: 0.5s;
 }
 
-.home .apresentation .btm-project:hover::before {
-  transform: scale(1.08);
-  left: 110%;
-  transition: 0.5s;
-}
-
 .home .apresentation .btm-project a {
   text-decoration: none;
   color: var(--color-text);
@@ -236,20 +230,19 @@ body {
   font-size: 14px;
 }
 
-.projects .project img {
+.projects .project .img-project {
   width: 250px;
   margin-top: 15px;
   box-shadow: 0 0 10px 0 var(--color-main);
 }
 
-.projects .project svg {
+.projects .project .svg-tec .svg {
   width: 50px;
-  margin-top: -20px;
-  margin-bottom: -30px;
 }
 
-.projects .project svg:hover {
+.projects .project .svg-tec img:hover {
   transform: scale(1.05);
+  filter: drop-shadow(0 0 10px var(--name));
 }
 
 .projects .project button {
@@ -377,7 +370,7 @@ body {
   transform: scale(1.1);
 }
 
-.contact .speak ul li svg{
+.contact .speak ul li img {
   color: var(--color-text);
   background-color: black;
   border-radius: 50%;
